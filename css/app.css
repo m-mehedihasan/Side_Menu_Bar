@@ -1,0 +1,103 @@
+
+/* now adding backgrounds  */
+
+.container {
+    width: 100%;
+    height: 100%;
+    background: url(../images/wallpaper.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.sidemenu {
+    /*  position  */
+    position: relative;
+    left: -250px;
+    
+    width: 250px;
+    height: 100vh;
+    background-color: #064b52f3;
+    transition: all .5s ease;
+}
+
+.sidemenu header {
+    color: #ffffff;
+    line-height: 1.87em;
+    font-size: 1.56em;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+ul li {
+    list-style: none;
+    padding-left: 30px;
+    transition: all .3s ease;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #000000;
+}
+
+ul li a {
+    font-size: 1.25em;
+    line-height: 1.56em;
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    padding: .5em;
+}
+
+ul li i {
+    margin-right: 1em;
+}
+
+ul li:hover {
+    padding-left: 40px;
+    background-color: #238f9bf3;
+}
+
+
+#checkbox {
+    display: none;
+} 
+
+label #show, label #hide {
+    position: absolute;
+    cursor: pointer;
+}
+
+label #show {
+    left: 1.56em;
+    top: 1.56em;
+    font-size: 1.25em;
+    background-color: #064b52f3;
+    color: #ffffff;
+    padding: .3em .5em;
+    transition: all .5s ease;
+}
+
+label #hide {
+    left: -210px;
+    top: .3em;
+    font-size: 1.25em;
+    background-color: #064b52f3;
+    color: #ffffff;
+    padding: .3em .5em;
+    z-index: 1;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+ #checkbox:checked ~ .sidemenu {
+    left: 0;
+}
+
+#checkbox:checked ~ label #show {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#checkbox:checked ~ label #hide {
+    opacity: 1;
+    left: 210px;
+}
+
